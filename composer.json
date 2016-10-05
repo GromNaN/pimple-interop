@@ -1,0 +1,30 @@
+{
+    "name": "gromnan/pimple-interop",
+    "description": "Pimple bridge for PSR-11 ContainerInterface",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jérôme Tamarelle",
+            "email": "jerome@tamarelle.net"
+        }
+    ],
+    "provide": {
+        "psr/container-implementation": "1.0.0"
+    },
+    "require": {
+        "pimple/pimple": "~3.0",
+        "psr/container": "~1.0@dev"
+    },
+    "autoload": {
+        "psr-4": { "GromNaN\\Pimple\\": "src/" }
+    },
+    "autoload-dev" : {
+        "psr-4": { "GromNaN\\Pimple\\Tests\\" : "tests/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
