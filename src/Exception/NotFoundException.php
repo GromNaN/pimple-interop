@@ -10,8 +10,4 @@ use Psr\Container\Exception\NotFoundException as NotFoundExceptionInterface;
 
 class NotFoundException extends \InvalidArgumentException implements NotFoundExceptionInterface
 {
-    public function __construct(\Exception $e)
-    {
-        parent::__construct($e->getMessage(), $e->getCode(), $e);
-    }
 }

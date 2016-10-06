@@ -20,16 +20,11 @@ class PimpleContainer implements ContainerInterface
 
     public function get($id)
     {
-        try {
-            return $this->pimple[$id];
-        } catch (\InvalidArgumentException $e) {
-            // checks if the exception is thrown by Pimple itself.
-            $trace = $e->getTrace();
-            if ($trace[0]['class'] === Container::class) {
-                throw new Exception\NotFoundException($e);
-            }
-            throw $e;
+        if (!isset($this->pimple[$id])) {
+            throw new Exception\NotFoundException(sprintf('Identifier "%s" is not defined.', $id));
         }
+
+        return $this->pimple[$id];
     }
 
     public function has($id)
