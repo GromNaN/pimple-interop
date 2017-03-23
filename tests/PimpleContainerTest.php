@@ -32,7 +32,7 @@ class PimpleContainerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException Psr\Container\Exception\NotFoundException
+     * @expectedException Psr\Container\NotFoundExceptionInterface
      * @expectedExceptionMessage Identifier "missing" is not defined.
      */
     public function testContainerNotFoundException()

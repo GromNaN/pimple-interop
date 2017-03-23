@@ -21,7 +21,7 @@ class PimpleContainer implements ContainerInterface
     public function get($id)
     {
         if (!isset($this->pimple[$id])) {
-            throw new Exception\NotFoundException(sprintf('Identifier "%s" is not defined.', $id));
+            throw new NotFoundException(sprintf('Identifier "%s" is not defined.', $id));
         }
 
         return $this->pimple[$id];

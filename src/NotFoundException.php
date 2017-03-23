@@ -4,9 +4,9 @@
  * @author Jérôme Tamarelle <jerome@tamarelle.net>
  */
 
-namespace GromNaN\Pimple\Exception;
+namespace GromNaN\Pimple;
 
-use Psr\Container\Exception\NotFoundException as NotFoundExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 
 class NotFoundException extends \InvalidArgumentException implements NotFoundExceptionInterface
 {
