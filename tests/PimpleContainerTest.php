@@ -9,8 +9,15 @@ namespace GromNaN\Pimple\Tests;
 use Psr\Container\ContainerInterface;
 use GromNaN\Pimple\PimpleContainer;
 use Pimple\Container;
+use PHPUnit\Framework\TestCase;
 
-class PimpleContainerTest extends \PHPUnit_Framework_TestCase
+// backward compatibility
+if (!class_exists('\PHPUnit\Framework\TestCase') &&
+    class_exists('\PHPUnit_Framework_TestCase')) {
+    class_alias('\PHPUnit_Framework_TestCase', '\PHPUnit\Framework\TestCase');
+}
+
+class PimpleContainerTest extends TestCase
 {
     public function testImplementation()
     {
