@@ -5,7 +5,7 @@ Pimple bridge for PSR-11 Container
 a standardised interface to access services defined in dependency injection containers.
 
 [Pimple](https://github.com/container-interop/fig-standards/blob/master/proposed/container.md) is
-the kind of library that should implement this interface. But it can't because Silex, le micro-framework
+the kind of library that should implement this interface. But it can't because Silex, the micro-framework
 on top of Pimple, declares a method `Silex\Application::get` that conflicts with `Psr\Container\ContainerInterface::get`
 
 Usage
