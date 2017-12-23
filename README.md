@@ -1,6 +1,8 @@
 Pimple bridge for PSR-11 Container
 ==================================
 
+**This package is deprecated since [support of PSR-11 added to Pimple](https://github.com/silexphp/Pimple#using-the-psr-11-servicelocator)**
+
 [PSR-11](https://github.com/container-interop/fig-standards/blob/master/proposed/container.md) is 
 a standardised interface to access services defined in dependency injection containers.
 
